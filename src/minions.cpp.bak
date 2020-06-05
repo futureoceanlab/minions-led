@@ -1,0 +1,16 @@
+//#define CAMERA
+
+#ifdef CAMERA
+#include "m_camera.cpp"
+#else
+#include "m_led.cpp"
+#endif
+
+int main(int argc , char *argv[])
+{
+#ifdef CAMERA
+    m_camera_run();
+#else
+    m_led_run();
+#endif
+}
